@@ -1,0 +1,12 @@
+---
+version: '2'
+
+services:
+  dev:
+    image: continuumio/anaconda3
+    container_name: dev
+    volumes:
+      - ./:/root/workspace
+    ports:
+      - 8888:8888 
+    command: /bin/bash -c "/opt/conda/bin/conda install jupyter -y --quiet && /opt/conda/bin/jupyter notebook --notebook-dir=/root/workspace --ip=0.0.0.0 --port=8888 --no-browser --allow-root > /root/workspace/logging.txt 2>&1"
