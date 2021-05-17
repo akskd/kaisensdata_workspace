@@ -1,0 +1,8 @@
+{
+	"version": 1,
+	"project_name" : "{{ cookiecutter.repo_name }}" ,
+	"app_root": "app",
+	"module_root": "modules",
+	"apps": [],
+	"modules":[]
+}
